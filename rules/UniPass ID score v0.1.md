@@ -8,11 +8,10 @@ The most basic thing of identity score is the trustworthiness of the identity. H
 
 The base calculation rule of the ID score is the authenticity of the identity multiplied by the evaluation dimensions of the identity. The authenticity of the identity is ensured by cryptographic verification on blockchain, and the evaluation will be developed from multiple dimensions around the identity, including address, assets, governance, etc.
 
-**UniPass** **ID Score = Identity authentic factor * Identity evaluation dimensions**
+***UniPass* *ID Score = Identity authentic factor \* Identity evaluation dimensions***
 
 <aside>
 💡 Note: the rules and dimensions related to ID score are still undergoing rapid iteration and will be continuously adjusted and optimized in the future.
-
 </aside>
 
 ## Identity authentic factor
@@ -30,16 +29,17 @@ Authenticity of identity is crucial to the identity evaluation system.
 
 | Evaluation Dimensions | Ratio |
 | --- | --- |
-| Basic identity | 40% |
-| Defi evaluation | 20% |
-| NFT evalution | 20% |
+| Basic identity | 400% |
+| Defi evaluation | 200% |
+| NFT evalution | 200% |
 | Community governance | To be listed |
-| Social network | 10% |
-| Verification & Activity | 10% |
+| Social network | 100% |
+| Verification & Activity | 100% |
+
+***Calculation  Identity Evaluation Dimensions : Sum ( Sub-score \* Ratio )***
 
 <aside>
 💡 Note: At present, only assets and NFTs on Ethereum would be counted, and more blockchains‘ data will continue to be integrated in the future.
-
 </aside>
 
 ### 1. Basic identity
@@ -51,6 +51,8 @@ Authenticity of identity is crucial to the identity evaluation system.
 | 3 | Total transactions | 25% | Etherscan |
 | 4 | On-chain activity | 10% | —— |
 | 5 | Domain records | 15% | ENS, DAS |
+
+***Basic Identity Score = Sum (ClassN_Points \* Ratio)***
 
 #### 1.1 Total net value
 
@@ -80,7 +82,7 @@ Description: Total transactions of all verified addresses.
 
 Description: On-chain activity is judged by the number of total transactions and the age.
 
-**Points = (Points of Age * Points of total transactions) / 100**
+***Points = (Points of Age \* Points of total transactions) / 100***
 
 #### 1.5 Domain records
 
@@ -97,6 +99,8 @@ Description: Domains that have completed reverse resolution in all verified addr
 | 1 | Defi assets value (usd) | 40% | Debank |
 | 2 | Defi protocols | 30% | Debank |
 | 3 | Defi intoxication | 30% | —— |
+
+***Defi Evaluation Score = Sum (ClassN_Points \* Ratio)***
 
 #### 2.1 Defi assets value
 
@@ -129,6 +133,8 @@ Description: The percentage of defi assets value in all assets value.
 | 1 | NFT numbers | 60% | NFTscan |
 | 2 | Poap numbers | 40% | Poap |
 
+***NFT Evaluation Score =  Sum (ClassN_Points \* Ratio)***
+
 #### 3.1 NFT numbers
 
 Description: Numbers of NFTs in all verified addresses.
@@ -156,6 +162,8 @@ To be listed
 | 1 | Follower | 80% | CyberConnect, RSS3 |
 | 2 | Following | 20% | CyberConnect, RSS3 |
 
+***Social Network Score =  Sum (ClassN_Points \* Ratio)***
+
 #### 5.1 Follower
 
 Description: Sum of followers of all verified addresses in CyberConnect and RSS3.
@@ -179,6 +187,8 @@ Description: Sum of following of all verified addresses in CyberConnect and RSS3
 | 1 | Email verification | 30% |
 | 2 | Ethereum address verification | 30% |
 | 3 | UniPass activity | 40% |
+
+***Verification & Activity Score = Sum (ClassN_Points \* Ratio)***
 
 #### 6.1 Email verification
 
